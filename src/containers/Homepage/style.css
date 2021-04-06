@@ -1,0 +1,144 @@
+.container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow: hidden;
+}
+.listOfUsers{
+    margin-top: 30px;
+    overflow: auto;
+    max-height: calc(200vh - calc(200vh / 2));
+}
+.chatArea{
+    width: 70%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+.chatHeader{
+    position: fixed;
+    width: 70%;
+    height: 40px;
+    background: #e2e0e0;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.chatControls{
+    display: flex;
+    position: fixed;
+    width: 70%;
+    height: 50px;
+    bottom: 0;
+}
+.champ{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+}
+.send{
+    width: 36px;
+    height: 36px;
+    background-color: #ecefff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4665ff;
+    padding: 0;
+    border-radius: 5px;
+    line-height: 36px;
+    transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+}
+.chatControls textarea{
+    width: 90%;
+}
+.chatControls button{
+    width: 10%;
+}
+
+.displayName{
+    display: flex;
+    border-bottom: 1px solid #ebe7fb;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px 10px 10px 20px;
+    transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+    transform: scale(0);
+    animation-name: showIn;
+    animation-duration: 0.2s; /* or: Xms */
+    animation-iteration-count: 1;
+    animation-direction: normal; /* or: normal */
+    animation-timing-function: cubic-bezier(
+      0.88,
+      0.19,
+      0.37,
+      1.11
+    ); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    animation-fill-mode: both; /* or: backwards, both, none */
+    animation-delay: 0.1s; /* or: Xms */
+  }
+  @keyframes showIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.displayName.active{
+    background: #fff;
+  
+    border-radius: 10px;
+}
+
+.displayName .displayPic{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.displayName .displayPic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.messageStyle{
+    background: skyblue;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.messageSections{
+    height: calc(100% - 90px);
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    top: 40px;
+}
+
+.onlineStatus{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background:#16e316;
+    border-radius: 5px;
+    box-shadow:0 0 10px 0 #16e316;
+}
+.onlineStatus.off{
+    background: green;
+    box-shadow: 0 0 0 0;
+}

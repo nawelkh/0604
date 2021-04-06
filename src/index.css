@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "sacramento" ,cursive!important;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiTypography-body2 {
+  font-family: "sacramento" ,cursive!important;
+
+}
+
+.MuiButton-root , .MuiTab-root,.MuiFormLabel-root{
+  font-family: "sacramento" ,cursive!important;
+
+}
+.MuiTypography-body1{
+  font-family: "sacramento" ,cursive!important;
+
+}
+.MuiInputBase-root{
+  font-family: "sacramento" ,cursive!important;
+
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
